@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENTS MANAGEMENT</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body class="min-h-screen bg-gradient-to-br from-indigo-400 to-purple-500 p-5">
+    <div class="container max-w-5xl mx-auto bg-white p-8 rounded-2xl shadow-2xl">
+        <h1 class="text-center text-2xl font-bold text-gray-800 mb-2">Students Management System</h1>
+        <p class="subtitle text-center text-gray-500 mb-8">FULL CRUD with API</p>
+
+
+        <form id="studentForm" class="bg-gray-100 p-8 rounded-xl mb-8 grid grid-cols-1 md:grid-cols-4 gap-4 shadow-md">
+            <input type="hidden" id="editId">
+
+            <input type="text" id="name" placeholder="Enter Name" required class="p-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition">
+            <input type="number" id="age" placeholder="Enter Age" required class="p-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition">
+            <input type="text" id="major" placeholder="Enter Major (e.g. BIT)" required class="p-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition">
+            <input type="number" step="0.01" id="gpa" placeholder="Enter GPA (e.g. 4.0)" required class="p-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition">
+
+            <button type="submit" id="submitBtn" class="col-span-1 md:col-span-4 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-bold rounded-lg hover:from-indigo-600 hover:to-purple-600 hover:shadow-lg transition transform hover:-translate-y-1">Add Student</button>
+        </form>
+
+        <table class="w-full border-collapse mt-5 rounded-2xl overflow-hidden shadow-lg">
+  <thead>
+    <tr>
+      <th class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white p-5 text-lg font-semibold">ID</th>
+      <th class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white p-5 text-lg font-semibold">Name</th>
+      <th class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white p-5 text-lg font-semibold">Age</th>
+      <th class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white p-5 text-lg font-semibold">Major</th>
+      <th class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white p-5 text-lg font-semibold">GPA</th>
+      <th class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white p-5 text-lg font-semibold">Actions</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody" class="bg-white"></tbody>
+</table>
+    </div>
+
+    <script src="test.js"> 
+        
+    </script>
+</body>
+</html>
